@@ -246,10 +246,24 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.textContent = 'Sending…';
       submitBtn.disabled    = true;
 
-      setTimeout(() => {
-        form.style.display = 'none';
-        formSuccess.classList.add('visible');
-      }, 900);
+      fetch('https://formspree.io/f/xkopowqk', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(res => {
+        if (res.ok) {
+          form.style.display = 'none';
+          formSuccess.classList.add('visible');
+        } else {
+          return res.json().then(data => { throw data; });
+        }
+      })
+      .catch(() => {
+        submitBtn.textContent = 'Send Message →';
+        submitBtn.disabled = false;
+        alert('Something went wrong. Please email us directly at info@scopebusinesses.com');
+      });
     });
 
     // Clear error state on user input
