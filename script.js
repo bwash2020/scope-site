@@ -223,6 +223,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   impactNums.forEach(num => impactObserver.observe(num));
 
+  /* ─── STAY CONNECTED FORM SUBMISSION ─── */
+  const signupForm    = document.getElementById('mc-signup-form');
+  const signupSuccess = document.getElementById('signupSuccess');
+
+  if (signupForm) {
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const required = signupForm.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        const empty = !field.value.trim();
+        field.classList.toggle('field-error', empty);
+        if (empty) valid = false;
+      });
+      if (!valid) return;
+
+      const btn = signupForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      fetch('https://formspree.io/f/xkopowqk', {
+        method: 'POST',
+        body: new FormData(signupForm),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(res => {
+        if (res.ok) {
+          signupForm.style.display = 'none';
+          signupSuccess.style.display = 'block';
+        } else {
+          throw new Error('failed');
+        }
+      })
+      .catch(() => {
+        btn.textContent = 'Join the Community';
+        btn.disabled = false;
+        alert('Something went wrong. Please email us at info@scopebusinesses.com');
+      });
+    });
+
+    signupForm.querySelectorAll('input').forEach(f =>
+      f.addEventListener('input', () => f.classList.remove('field-error'))
+    );
+  }
+
   /* ─── CONTACT FORM SUBMISSION ─── */
   const form        = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
