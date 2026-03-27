@@ -234,9 +234,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const required = signupForm.querySelectorAll('[required]');
       let valid = true;
       required.forEach(field => {
-        const empty = !field.value.trim();
-        field.classList.toggle('field-error', empty);
-        if (empty) valid = false;
+        const invalid = field.type === 'checkbox' ? !field.checked : !field.value.trim();
+        field.classList.toggle('field-error', invalid);
+        if (invalid) valid = false;
       });
       if (!valid) return;
 
@@ -281,9 +281,9 @@ document.addEventListener('DOMContentLoaded', () => {
       let valid = true;
 
       required.forEach(field => {
-        const empty = !field.value.trim();
-        field.classList.toggle('field-error', empty);
-        if (empty) valid = false;
+        const invalid = field.type === 'checkbox' ? !field.checked : !field.value.trim();
+        field.classList.toggle('field-error', invalid);
+        if (invalid) valid = false;
       });
 
       if (!valid) return;
@@ -312,9 +312,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Clear error state on user input
+    // Clear error state on user input or checkbox change
     form.querySelectorAll('input, select, textarea').forEach(field => {
-      field.addEventListener('input', () => field.classList.remove('field-error'));
+      const evt = field.type === 'checkbox' ? 'change' : 'input';
+      field.addEventListener(evt, () => field.classList.remove('field-error'));
     });
   }
 
