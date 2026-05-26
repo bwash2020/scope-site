@@ -335,6 +335,18 @@ a   { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 4px;
+  /* Reset button defaults so it looks like a nav link */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
 }
 
 .nav-chevron {
@@ -2007,6 +2019,38 @@ input.field-error, textarea.field-error {
 }
 
 /* ─── FOOTER BOTTOM ─── */
+/* ─── NAV SOCIAL LINK ─── */
+.nav-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s ease;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+.nav-social-link:hover { color: var(--gold, #e5b93e); }
+
+/* ─── FOOTER SOCIAL ─── */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-social-link:hover { color: var(--gold, #e5b93e); }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
