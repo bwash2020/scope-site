@@ -1319,6 +1319,31 @@ a   { color: inherit; text-decoration: none; }
   opacity: 1;
   transform: translateX(4px);
 }
+.svc-learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  padding: .45rem 1rem;
+  border-radius: 3px;
+  transition: background .2s, color .2s;
+  white-space: nowrap;
+}
+.svc-learn-more:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+.svc-card--featured {
+  border-color: rgba(229,185,62,.35);
+  background: linear-gradient(135deg, rgba(229,185,62,.06) 0%, rgba(255,255,255,.03) 100%);
+}
 
 /* ════════════════════════════════════
    WHY CHOOSE US
