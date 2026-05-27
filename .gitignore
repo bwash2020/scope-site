@@ -1,0 +1,11 @@
+node_modules/
+.claude/
+compress-photos.js
+package.json
+package-lock.json
+serve.bat
+serve.ps1
+server.js
+*.log
+.DS_Store
+Thumbs.db
