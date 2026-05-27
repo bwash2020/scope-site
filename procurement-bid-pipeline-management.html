@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bid Pipeline Management | Scope Business Services</title>
+  <meta name="description" content="Scope helps contractors, MWBEs, nonprofits, and small businesses organize open bids, RFPs, deadlines, documents, and follow-ups with bid pipeline management support." />
+  <meta name="keywords" content="bid pipeline management, procurement support services, RFP management support, bid management for contractors, MWBE procurement support, government contract bid support" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.scopebusinesses.com/procurement-bid-pipeline-management" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.scopebusinesses.com/procurement-bid-pipeline-management" />
+  <meta property="og:title" content="Bid Pipeline Management | Scope Business Services" />
+  <meta property="og:description" content="Scope helps contractors, MWBEs, nonprofits, and small businesses organize open bids, RFPs, deadlines, documents, and follow-ups." />
+  <meta property="og:image" content="/scope-business-services-logo.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ── PAGE-SPECIFIC TOKENS ── */
+    :root {
+      --pbm-surface:   #0f0758;
+      --pbm-card:      rgba(255,255,255,0.035);
+      --pbm-card-border: rgba(255,255,255,0.08);
+      --pbm-gold-line: rgba(245,197,24,0.25);
+    }
+
+    /* ── HERO ── */
+    .pbm-hero {
+      background: var(--navy-deep);
+      padding: 130px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pbm-hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(245,197,24,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .pbm-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 60px;
+      align-items: center;
+    }
+    .pbm-hero-cert-strip {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .pbm-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .pbm-hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+      font-weight: 900;
+      line-height: 1.02;
+      color: var(--white);
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+    .pbm-hero-sub {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--white-70);
+      line-height: 1.75;
+      max-width: 560px;
+      margin-bottom: 36px;
+    }
+    .pbm-hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .pbm-hero-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(245,197,24,0.2);
+      border-radius: 14px;
+      padding: 32px 28px;
+      backdrop-filter: blur(8px);
+    }
+    .pbm-hero-card-label {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pbm-hero-card-label::before {
+      content: '';
+      display: block;
+      width: 18px; height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+    .pbm-hero-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .pbm-hero-card ul li {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      color: var(--white-70);
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pbm-hero-card ul li:last-child { border-bottom: none; }
+    .pbm-hero-card ul li::before {
+      content: '';
+      display: block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .pbm-hero-card-cta {
+      margin-top: 22px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      color: var(--white-50);
+      line-height: 1.6;
+    }
+    .pbm-hero-card-cta strong { color: var(--gold); }
+
+    /* ── SECTION WRAPPER ── */
+    .pbm-section {
+      padding: 96px 0;
+    }
+    .pbm-section-alt {
+      background: rgba(255,255,255,0.02);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .pbm-section-dark {
+      background: var(--navy-deep);
+    }
+    .pbm-section-gold-tint {
+      background: rgba(245,197,24,0.03);
+      border-top: 1px solid rgba(245,197,24,0.1);
+      border-bottom: 1px solid rgba(245,197,24,0.1);
+    }
+
+    /* ── PROBLEM SECTION ── */
+    .pbm-problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .pbm-problem-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .pbm-problem-list li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--white-70);
+      line-height: 1.65;
+    }
+    .pbm-problem-list li:first-child { padding-top: 0; }
+    .pbm-problem-list li:last-child { border-bottom: none; }
+    .pbm-problem-icon {
+      width: 32px; height: 32px;
+      background: rgba(245,197,24,0.1);
+      border: 1px solid rgba(245,197,24,0.2);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+    .pbm-problem-right {
+      position: sticky;
+      top: 100px;
+    }
+    .pbm-callout-box {
+      background: rgba(245,197,24,0.06);
+      border: 1px solid rgba(245,197,24,0.22);
+      border-radius: 14px;
+      padding: 36px 32px;
+    }
+    .pbm-callout-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .pbm-callout-box p {
+      font-family: var(--font-body);
+      font-size: 0.93rem;
+      color: var(--white-70);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* ── WHAT SCOPE MANAGES CARDS ── */
+    .pbm-manages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .pbm-manage-card {
+      background: var(--pbm-card);
+      border: 1px solid var(--pbm-card-border);
+      border-radius: 12px;
+      padding: 28px 26px;
+      transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+    }
+    .pbm-manage-card:hover {
+      border-color: rgba(245,197,24,0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.35);
+    }
+    .pbm-manage-icon {
+      width: 44px; height: 44px;
+      background: rgba(245,197,24,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .pbm-manage-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+    .pbm-manage-card p {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--white-50);
+      line-height: 1.65;
+    }
+    .pbm-manage-card .pbm-manage-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+    .pbm-manage-tags span {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: rgba(245,197,24,0.1);
+      color: var(--gold);
+      padding: 3px 9px;
+      border-radius: 4px;
+    }
+
+    /* ── FREE AUDIT SECTION ── */
+    .pbm-audit-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .pbm-audit-left h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+    .pbm-audit-left p {
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+      color: var(--white-70);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .pbm-audit-disclaimer {
+      background: rgba(255,255,255,0.04);
+      border-left: 3px solid rgba(245,197,24,0.4);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--white-50) !important;
+      line-height: 1.6;
+      margin-top: 18px !important;
+    }
+    .pbm-audit-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    .pbm-audit-checklist li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--white-70);
+      padding: 7px 0;
+    }
+    .pbm-audit-checklist li::before {
+      content: '✓';
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gold);
+      background: rgba(245,197,24,0.12);
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── FORM ── */
+    .pbm-form-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 16px;
+      padding: 36px 32px;
+    }
+    .pbm-form-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .pbm-form-sub {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--white-50);
+      margin-bottom: 24px;
+    }
+    .pbm-form .form-group {
+      margin-bottom: 16px;
+    }
+    .pbm-form .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .pbm-form label.static-label {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white-50);
+      display: block;
+      margin-bottom: 7px;
+    }
+    .pbm-form input[type="text"],
+    .pbm-form input[type="email"],
+    .pbm-form input[type="tel"],
+    .pbm-form select,
+    .pbm-form textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .pbm-form input::placeholder,
+    .pbm-form textarea::placeholder { color: rgba(255,255,255,0.3); }
+    .pbm-form input:focus,
+    .pbm-form select:focus,
+    .pbm-form textarea:focus {
+      border-color: rgba(245,197,24,0.5);
+      background: rgba(255,255,255,0.08);
+    }
+    .pbm-form select option { background: #0d0f2b; color: #fff; }
+    .pbm-form .field-error { border-color: rgba(255, 80, 80, 0.7) !important; }
+
+    /* File upload */
+    .pbm-file-zone {
+      border: 2px dashed rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 22px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+    }
+    .pbm-file-zone:hover,
+    .pbm-file-zone.drag-over {
+      border-color: rgba(245,197,24,0.45);
+      background: rgba(245,197,24,0.04);
+    }
+    .pbm-file-zone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%; height: 100%;
+    }
+    .pbm-file-label {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--white-50);
+      pointer-events: none;
+    }
+    .pbm-file-label strong { color: var(--gold); }
+    .pbm-file-label .pbm-file-types {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      display: block;
+      margin-top: 4px;
+    }
+    .pbm-file-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+    .pbm-file-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--white-70);
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .pbm-file-list li::before { content: '📄'; font-size: 0.85rem; }
+    .pbm-file-error {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: rgba(255, 100, 100, 0.9);
+      margin-top: 6px;
+      display: none;
+    }
+
+    /* Consent */
+    .pbm-consent {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin: 18px 0;
+    }
+    .pbm-consent-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--white-70);
+      line-height: 1.55;
+      cursor: pointer;
+    }
+    .pbm-consent-label input[type="checkbox"] {
+      width: 16px; height: 16px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: var(--gold);
+    }
+    .pbm-consent-label a { color: var(--gold); text-decoration: underline; }
+    .pbm-consent-sub {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      color: var(--white-25);
+    }
+
+    /* Success state */
+    .pbm-form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .pbm-success-check {
+      width: 56px; height: 56px;
+      background: rgba(245,197,24,0.15);
+      border: 2px solid rgba(245,197,24,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 0 auto 18px;
+    }
+    .pbm-form-success h4 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .pbm-form-success p {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--white-70);
+      line-height: 1.7;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .pbm-form-success .pbm-urgent-note {
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: var(--gold);
+    }
+
+    /* ── PRICING ── */
+    .pbm-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+    .pbm-price-card {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+      position: relative;
+    }
+    .pbm-price-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+      border-color: rgba(245,197,24,0.3);
+    }
+    .pbm-price-card.featured {
+      border-color: rgba(245,197,24,0.45);
+      background: rgba(245,197,24,0.05);
+    }
+    .pbm-price-badge {
+      position: absolute;
+      top: -13px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--navy-deep);
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .pbm-price-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .pbm-price-amount {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .pbm-price-amount span {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white-50);
+    }
+    .pbm-price-freq {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      color: var(--white-50);
+      margin-bottom: 20px;
+    }
+    .pbm-price-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin-bottom: 18px;
+    }
+    .pbm-price-features {
+      list-style: none;
+      padding: 0;
+      flex: 1;
+    }
+    .pbm-price-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--white-70);
+      line-height: 1.55;
+      padding: 6px 0;
+    }
+    .pbm-price-features li::before {
+      content: '✓';
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .pbm-price-cta {
+      margin-top: 22px;
+    }
+
+    /* ── UPSELL FLOW ── */
+    .pbm-upsell {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 32px 36px;
+    }
+    .pbm-upsell-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--white-50);
+      margin-bottom: 20px;
+    }
+    .pbm-upsell-flow {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      row-gap: 12px;
+    }
+    .pbm-upsell-step {
+      background: rgba(245,197,24,0.08);
+      border: 1px solid rgba(245,197,24,0.22);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .pbm-upsell-arrow {
+      font-size: 1.1rem;
+      color: rgba(245,197,24,0.4);
+      padding: 0 10px;
+      flex-shrink: 0;
+    }
+    .pbm-upsell-note {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      color: var(--white-25);
+      margin-top: 14px;
+    }
+
+    /* ── WHO THIS IS FOR ── */
+    .pbm-who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .pbm-who-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 18px 20px;
+      transition: border-color 0.2s;
+    }
+    .pbm-who-item:hover { border-color: rgba(245,197,24,0.3); }
+    .pbm-who-dot {
+      width: 8px; height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .pbm-who-item span {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--white-70);
+      line-height: 1.5;
+    }
+
+    /* ── FAQ ACCORDION ── */
+    .pbm-faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .pbm-faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .pbm-faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      transition: color 0.2s;
+    }
+    .pbm-faq-question:hover { color: var(--gold); }
+    .pbm-faq-chevron {
+      width: 18px; height: 18px;
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: transform 0.3s var(--ease-out);
+    }
+    .pbm-faq-item.open .pbm-faq-chevron { transform: rotate(180deg); }
+    .pbm-faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s var(--ease-out), padding 0.2s;
+    }
+    .pbm-faq-item.open .pbm-faq-answer { max-height: 400px; }
+    .pbm-faq-answer p {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--white-70);
+      line-height: 1.75;
+      padding-bottom: 20px;
+    }
+
+    /* ── FINAL CTA ── */
+    .pbm-final-cta {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-mid) 100%);
+      border-top: 1px solid rgba(245,197,24,0.15);
+      border-bottom: 1px solid rgba(245,197,24,0.15);
+      text-align: center;
+      padding: 96px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .pbm-final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(245,197,24,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .pbm-final-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      position: relative;
+    }
+    .pbm-final-cta p {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--white-70);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.75;
+      position: relative;
+    }
+    .pbm-final-ctas {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    /* ── DISCLAIMER ── */
+    .pbm-disclaimer {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      color: var(--white-25);
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.65;
+      padding: 36px 0 8px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .pbm-hero-inner { grid-template-columns: 1fr; }
+      .pbm-hero-card { display: none; }
+      .pbm-problem-grid { grid-template-columns: 1fr; }
+      .pbm-problem-right { position: static; }
+      .pbm-audit-inner { grid-template-columns: 1fr; }
+      .pbm-pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .pbm-manages-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .pbm-pricing-grid { grid-template-columns: 1fr; }
+      .pbm-manages-grid { grid-template-columns: 1fr; }
+      .pbm-who-grid { grid-template-columns: 1fr; }
+      .pbm-upsell-flow { flex-direction: column; align-items: flex-start; }
+      .pbm-form .form-row-2 { grid-template-columns: 1fr; }
+      .pbm-hero-ctas { flex-direction: column; }
+      .pbm-hero-ctas .btn { width: 100%; justify-content: center; }
+      .pbm-final-ctas { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="scope-business-services-logo.jpg" alt="Scope Business Services" class="logo-img" loading="eager" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#why-us">Why Us</a></li>
+        <li><a href="index.html#clients">Our Reach</a></li>
+        <li><a href="index.html#in-action">In Action</a></li>
+        <li><a href="index.html#contact" class="nav-cta-link">Contact</a></li>
+      </ul>
+      <div class="nav-certs">
+        <span class="cert-pill">MWBE</span>
+        <span class="cert-pill">SBE</span>
+        <span class="cert-pill">WBE</span>
+        <a href="https://www.linkedin.com/company/scope-business-services" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M20.45 20.45h-3.554v-5.569c0-1.328-.025-3.037-1.85-3.037-1.851 0-2.135 1.445-2.135 2.939v5.667H9.354V9h3.414v1.561h.048c.476-.9 1.637-1.85 3.37-1.85 3.602 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="pbm-hero">
+    <div class="container">
+      <div class="pbm-hero-inner">
+        <div class="pbm-hero-left reveal">
+          <div class="pbm-hero-cert-strip">
+            <span class="cert-pill">MWBE</span>
+            <span class="cert-pill">SBE</span>
+            <span class="cert-pill">WBE</span>
+          </div>
+          <h1>Procurement &amp; Bid Pipeline Management</h1>
+          <p class="pbm-hero-headline">Manage Every Open<br />Bid From One Place</p>
+          <p class="pbm-hero-sub">Scope helps contractors, MWBEs, nonprofits, and small businesses track RFPs, RFQs, deadlines, documents, addenda, and follow-ups so no opportunity falls through the cracks.</p>
+          <div class="pbm-hero-ctas">
+            <a href="#audit-form" class="btn btn-gold btn-large">
+              Get a Free Bid Pipeline Audit
+              <svg viewBox="0 0 20 20" fill="none" width="18" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="index.html#contact" class="btn btn-outline btn-large">Schedule a Consultation</a>
+          </div>
+        </div>
+        <div class="pbm-hero-card reveal reveal-delay">
+          <div class="pbm-hero-card-label">What Scope Tracks</div>
+          <ul>
+            <li>RFP &amp; RFQ Deadlines</li>
+            <li>Pre-Bid Meetings &amp; Site Visits</li>
+            <li>Addenda &amp; Requirement Changes</li>
+            <li>Certifications &amp; Insurance</li>
+            <li>Submission Checklists</li>
+            <li>Weekly Action Priorities</li>
+          </ul>
+          <p class="pbm-hero-card-cta">Start with a <strong>Free Bid Pipeline Audit</strong> — no commitment required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROBLEM ═══ -->
+  <section class="pbm-section pbm-section-alt" id="problem">
+    <div class="container">
+      <div class="pbm-problem-grid">
+        <div>
+          <div class="eyebrow">The Problem</div>
+          <h2 class="section-title" style="text-align:left; font-size:clamp(2rem,3.5vw,3rem);">Opportunities Are Easy to Miss When the Process Is Scattered</h2>
+          <ul class="pbm-problem-list">
+            <li>
+              <div class="pbm-problem-icon">
+                <svg viewBox="0 0 20 20" fill="none" width="16"><path d="M3 4h14M3 8h8M3 12h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              Bid notices are spread across email, portals, agency websites, and spreadsheets.
+            </li>
+            <li>
+              <div class="pbm-problem-icon">
+                <svg viewBox="0 0 20 20" fill="none" width="16"><rect x="3" y="2" width="14" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 7h6M7 11h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              Deadlines, walkthroughs, addenda, and Q&amp;A dates are easy to overlook.
+            </li>
+            <li>
+              <div class="pbm-problem-icon">
+                <svg viewBox="0 0 20 20" fill="none" width="16"><path d="M9 11l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              Required forms, insurance, certifications, and attachments are often incomplete.
+            </li>
+            <li>
+              <div class="pbm-problem-icon">
+                <svg viewBox="0 0 20 20" fill="none" width="16"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M10 6v4l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              Teams wait until the last minute to organize proposal materials.
+            </li>
+            <li>
+              <div class="pbm-problem-icon">
+                <svg viewBox="0 0 20 20" fill="none" width="16"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              There is no clear weekly action plan.
+            </li>
+          </ul>
+        </div>
+        <div class="pbm-problem-right reveal">
+          <div class="pbm-callout-box">
+            <h3>One Missed Deadline<br />Can Cost a Contract</h3>
+            <p>Bid management is not just about tracking dates — it is about knowing exactly what is missing, what is urgent, and what needs to happen before submission. Scope brings the structure your team needs.</p>
+            <a href="#audit-form" class="btn btn-gold">Get a Free Audit →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHAT SCOPE MANAGES ═══ -->
+  <section class="pbm-section" id="what-we-manage">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow">Services</div>
+        <h2 class="section-title">What Scope Manages</h2>
+        <p class="section-intro">Six focused areas of support designed to keep your bid pipeline organized, compliant, and moving forward.</p>
+      </div>
+      <div class="pbm-manages-grid">
+
+        <div class="pbm-manage-card reveal">
+          <div class="pbm-manage-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <h4>Bid Pipeline Setup</h4>
+          <p>Custom tracker, calendar, compliance checklist, and workflow built around your active opportunities and recurring bid notices.</p>
+          <div class="pbm-manage-tags"><span>Tracker</span><span>Calendar</span><span>Workflow</span></div>
+        </div>
+
+        <div class="pbm-manage-card reveal">
+          <div class="pbm-manage-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M8 2v4M16 2v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="14" r="1.5" fill="currentColor"/><circle cx="12" cy="14" r="1.5" fill="currentColor"/><circle cx="16" cy="14" r="1.5" fill="currentColor"/></svg>
+          </div>
+          <h4>Deadline &amp; Calendar Tracking</h4>
+          <p>Submission dates, pre-bid meetings, site visits, Q&amp;A periods, and addenda deadlines all tracked in one organized calendar.</p>
+          <div class="pbm-manage-tags"><span>Submissions</span><span>Addenda</span><span>Alerts</span></div>
+        </div>
+
+        <div class="pbm-manage-card reveal">
+          <div class="pbm-manage-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22"><path d="M9 11l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="2" width="16" height="20" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 7h8M8 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Document &amp; Compliance Checklist</h4>
+          <p>Required forms, certifications, insurance, bonding, references, and capability statements organized and flagged before submission.</p>
+          <div class="pbm-manage-tags"><span>Compliance</span><span>Insurance</span><span>Certs</span></div>
+        </div>
+
+        <div class="pbm-manage-card reveal">
+          <div class="pbm-manage-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Weekly Action List</h4>
+          <p>Prioritized next steps delivered weekly so your team always knows what to focus on and nothing slips through the cracks.</p>
+          <div class="pbm-manage-tags"><span>Weekly</span><span>Prioritized</span><span>Action-Ready</span></div>
+        </div>
+
+        <div class="pbm-manage-card reveal">
+          <div class="pbm-manage-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Addenda &amp; Requirement Review</h4>
+          <p>Track scope clarifications, bid modifications, and requirement changes so your submission reflects the most current version.</p>
+          <div class="pbm-manage-tags"><span>Addenda</span><span>Changes</span><span>Scope Clarity</span></div>
+        </div>
+
+        <div class="pbm-manage-card reveal">
+          <div class="pbm-manage-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Proposal Coordination Add-On</h4>
+          <p>For high-priority submissions, Scope supports requirement review, attachment tracking, task coordination, and final package readiness.</p>
+          <div class="pbm-manage-tags"><span>High-Priority</span><span>Coordination</span><span>Readiness</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FREE AUDIT + FORM ═══ -->
+  <section class="pbm-section pbm-section-gold-tint" id="audit-form">
+    <div class="container">
+      <div class="pbm-audit-inner">
+
+        <div class="pbm-audit-left reveal">
+          <div class="eyebrow">Free Offer</div>
+          <h2>Start With a<br />Free Bid Pipeline Audit</h2>
+          <p>Send us up to three current opportunities, bid notices, or RFP links. Scope will review deadlines, requirements, missing items, compliance risks, and recommended next steps.</p>
+          <ul class="pbm-audit-checklist">
+            <li>Deadline summary for each opportunity</li>
+            <li>Missing document and form review</li>
+            <li>Compliance risk flags</li>
+            <li>Recommended next steps</li>
+            <li>Follow-up from the Scope team</li>
+          </ul>
+          <p class="pbm-audit-disclaimer">The free audit is a limited diagnostic. It does not include full proposal writing, submission preparation, portal submission, or ongoing tracking.</p>
+        </div>
+
+        <div class="pbm-form-card reveal">
+          <form class="pbm-form" id="auditForm" novalidate>
+            <p class="pbm-form-title">Request My Free Audit</p>
+            <p class="pbm-form-sub">All fields marked * are required. We'll follow up within 1–2 business days.</p>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="static-label" for="af-first">First Name *</label>
+                <input type="text" id="af-first" name="firstName" required placeholder="First" />
+              </div>
+              <div class="form-group">
+                <label class="static-label" for="af-last">Last Name *</label>
+                <input type="text" id="af-last" name="lastName" required placeholder="Last" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="static-label" for="af-biz">Business Name *</label>
+              <input type="text" id="af-biz" name="businessName" required placeholder="Your business or organization" />
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="static-label" for="af-email">Email *</label>
+                <input type="email" id="af-email" name="email" required placeholder="you@company.com" />
+              </div>
+              <div class="form-group">
+                <label class="static-label" for="af-phone">Phone *</label>
+                <input type="tel" id="af-phone" name="phone" required placeholder="(000) 000-0000" />
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="static-label" for="af-biztype">Business Type *</label>
+                <select id="af-biztype" name="businessType" required>
+                  <option value="" disabled selected>Select type...</option>
+                  <option>Contractor</option>
+                  <option>Subcontractor</option>
+                  <option>Professional services firm</option>
+                  <option>Nonprofit</option>
+                  <option>Workforce development provider</option>
+                  <option>Supplier / vendor</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="static-label" for="af-cert">Certification Status</label>
+                <select id="af-cert" name="certificationStatus">
+                  <option value="" disabled selected>Select status...</option>
+                  <option>MWBE</option>
+                  <option>SBE</option>
+                  <option>WBE</option>
+                  <option>MBE</option>
+                  <option>DBE</option>
+                  <option>SDVOB</option>
+                  <option>Not certified</option>
+                  <option>In progress</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="static-label" for="af-opptype">Opportunity Type *</label>
+                <select id="af-opptype" name="opportunityType" required>
+                  <option value="" disabled selected>Select type...</option>
+                  <option>Construction bid</option>
+                  <option>Subcontracting opportunity</option>
+                  <option>Government RFP</option>
+                  <option>Funding opportunity</option>
+                  <option>Professional services RFP</option>
+                  <option>Vendor / supplier opportunity</option>
+                  <option>Not sure</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="static-label" for="af-bids">Active Bids / RFPs</label>
+                <input type="text" id="af-bids" name="activeBids" placeholder="e.g. 3 active bids" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="static-label" for="af-deadline">Most Urgent Deadline</label>
+              <input type="text" id="af-deadline" name="urgentDeadline" placeholder="e.g. June 15, 2026 — City RFP" />
+            </div>
+
+            <!-- File Upload -->
+            <div class="form-group">
+              <label class="static-label">Upload Bid Documents (optional)</label>
+              <div class="pbm-file-zone" id="fileZone">
+                <input type="file" id="af-files" name="files" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.png,.jpg,.jpeg" />
+                <div class="pbm-file-label">
+                  <strong>Click to upload</strong> or drag files here
+                  <span class="pbm-file-types">PDF, DOC/DOCX, XLS/XLSX, CSV, PNG/JPG · Up to 5 files · 25 MB total</span>
+                </div>
+              </div>
+              <div class="pbm-file-error" id="fileError">Too many files or total size exceeds 25 MB. Please reduce and try again.</div>
+              <ul class="pbm-file-list" id="fileList"></ul>
+            </div>
+
+            <div class="pbm-consent">
+              <label class="pbm-consent-label">
+                <input type="checkbox" name="consent" id="af-consent" required />
+                <span>I agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms &amp; Conditions</a> and consent to being contacted.</span>
+              </label>
+              <p class="pbm-consent-sub">We respect your privacy and will never share your information.</p>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-full btn-large">
+              Request My Free Audit
+              <svg viewBox="0 0 20 20" fill="none" width="18" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </form>
+
+          <div class="pbm-form-success" id="auditSuccess">
+            <div class="pbm-success-check">✓</div>
+            <h4>Audit Request Received</h4>
+            <p>Thank you. Scope has received your Bid Pipeline Audit request. We will review your information and follow up with a summary of deadlines, missing items, and recommended next steps.</p>
+            <p class="pbm-urgent-note">If your deadline is within 72 hours, please contact us directly at <a href="mailto:info@scopebusinesses.com" style="color:var(--gold)">info@scopebusinesses.com</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRICING ═══ -->
+  <section class="pbm-section" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow">Pricing</div>
+        <h2 class="section-title">Simple Support Options<br />Based on Your Bid Volume</h2>
+        <p class="section-intro">Start free. Add structure when you need it. Scale support as your pipeline grows.</p>
+      </div>
+
+      <div class="pbm-pricing-grid">
+
+        <div class="pbm-price-card reveal">
+          <div class="pbm-price-name">Free Bid Pipeline Audit</div>
+          <div class="pbm-price-amount">Free</div>
+          <div class="pbm-price-freq">One-time · No commitment</div>
+          <div class="pbm-price-divider"></div>
+          <ul class="pbm-price-features">
+            <li>Review of up to 3 current opportunities</li>
+            <li>Deadline summary</li>
+            <li>Missing item review</li>
+            <li>Risk flags identified</li>
+            <li>Recommended next steps</li>
+          </ul>
+          <div class="pbm-price-cta">
+            <a href="#audit-form" class="btn btn-outline btn-full">Get Free Audit →</a>
+          </div>
+        </div>
+
+        <div class="pbm-price-card featured reveal">
+          <div class="pbm-price-badge">Most Popular Start</div>
+          <div class="pbm-price-name">Bid Pipeline Setup</div>
+          <div class="pbm-price-amount">$750<span>+</span></div>
+          <div class="pbm-price-freq">One-time · Starting price</div>
+          <div class="pbm-price-divider"></div>
+          <ul class="pbm-price-features">
+            <li>Custom bid tracker</li>
+            <li>Deadline calendar</li>
+            <li>Compliance checklist</li>
+            <li>Document checklist</li>
+            <li>Folder structure recommendations</li>
+            <li>Workflow map</li>
+            <li>60-minute review call</li>
+          </ul>
+          <div class="pbm-price-cta">
+            <a href="index.html#contact" class="btn btn-gold btn-full">Get Started →</a>
+          </div>
+        </div>
+
+        <div class="pbm-price-card reveal">
+          <div class="pbm-price-name">Monthly Bid Management</div>
+          <div class="pbm-price-amount">$500<span>/mo</span></div>
+          <div class="pbm-price-freq">Monthly · Starting price</div>
+          <div class="pbm-price-divider"></div>
+          <ul class="pbm-price-features">
+            <li>Weekly pipeline updates</li>
+            <li>Deadline monitoring</li>
+            <li>Addenda tracking</li>
+            <li>Missing document alerts</li>
+            <li>Weekly action list</li>
+            <li>Monthly pipeline summary</li>
+          </ul>
+          <div class="pbm-price-cta">
+            <a href="index.html#contact" class="btn btn-outline btn-full">Get Started →</a>
+          </div>
+        </div>
+
+        <div class="pbm-price-card reveal">
+          <div class="pbm-price-name">Proposal Coordination</div>
+          <div class="pbm-price-amount" style="font-size:1.5rem; padding-top:4px;">Custom Quote</div>
+          <div class="pbm-price-freq">Per RFP / per project</div>
+          <div class="pbm-price-divider"></div>
+          <ul class="pbm-price-features">
+            <li>Requirement review</li>
+            <li>Submission checklist</li>
+            <li>Attachment tracking</li>
+            <li>Task coordination</li>
+            <li>Draft content coordination</li>
+            <li>Final package readiness review</li>
+          </ul>
+          <div class="pbm-price-cta">
+            <a href="index.html#contact" class="btn btn-outline btn-full">Request Quote →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Upsell Logic -->
+      <div class="pbm-upsell reveal">
+        <p class="pbm-upsell-title">Recommended Upgrade Path</p>
+        <div class="pbm-upsell-flow">
+          <div class="pbm-upsell-step">Free Audit</div>
+          <span class="pbm-upsell-arrow">→</span>
+          <div class="pbm-upsell-step">Pipeline Setup <span style="font-weight:400;opacity:.7;font-size:.72rem;margin-left:4px;">(no system yet)</span></div>
+          <span class="pbm-upsell-arrow">→</span>
+          <div class="pbm-upsell-step">Monthly Management <span style="font-weight:400;opacity:.7;font-size:.72rem;margin-left:4px;">(3+ active bids)</span></div>
+          <span class="pbm-upsell-arrow">→</span>
+          <div class="pbm-upsell-step">Proposal Coordination <span style="font-weight:400;opacity:.7;font-size:.72rem;margin-left:4px;">(urgent RFP)</span></div>
+        </div>
+        <p class="pbm-upsell-note">Clients can start at any stage and upgrade at any time. After proposal submission, monthly management helps maintain pipeline continuity.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ WHO THIS IS FOR ═══ -->
+  <section class="pbm-section pbm-section-alt" id="who">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow">Who This Is For</div>
+        <h2 class="section-title">Built for Organizations<br />Pursuing Competitive Opportunities</h2>
+      </div>
+      <div class="pbm-who-grid">
+        <div class="pbm-who-item reveal">
+          <div class="pbm-who-dot"></div>
+          <span>Contractors and subcontractors</span>
+        </div>
+        <div class="pbm-who-item reveal">
+          <div class="pbm-who-dot"></div>
+          <span>MWBE, SBE, and WBE certified firms</span>
+        </div>
+        <div class="pbm-who-item reveal">
+          <div class="pbm-who-dot"></div>
+          <span>Nonprofits and community-based organizations</span>
+        </div>
+        <div class="pbm-who-item reveal">
+          <div class="pbm-who-dot"></div>
+          <span>Workforce development providers</span>
+        </div>
+        <div class="pbm-who-item reveal">
+          <div class="pbm-who-dot"></div>
+          <span>Professional service firms</span>
+        </div>
+        <div class="pbm-who-item reveal">
+          <div class="pbm-who-dot"></div>
+          <span>Small businesses pursuing city, state, agency, institutional, or large private opportunities</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="pbm-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="pbm-faq-list">
+
+        <div class="pbm-faq-item">
+          <button class="pbm-faq-question" aria-expanded="false">
+            Are prices monthly or one-time?
+            <svg class="pbm-faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pbm-faq-answer" role="region">
+            <p>The Free Bid Pipeline Audit is one-time and free. Bid Pipeline Setup starts at $750 and is a one-time fee. Monthly Bid Management starts at $500/month. Proposal Coordination is quoted per project.</p>
+          </div>
+        </div>
+
+        <div class="pbm-faq-item">
+          <button class="pbm-faq-question" aria-expanded="false">
+            What is included in the free audit?
+            <svg class="pbm-faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pbm-faq-answer" role="region">
+            <p>A limited review of up to three current opportunities, deadlines, missing items, compliance risks, and recommended next steps.</p>
+          </div>
+        </div>
+
+        <div class="pbm-faq-item">
+          <button class="pbm-faq-question" aria-expanded="false">
+            What is not included in the free audit?
+            <svg class="pbm-faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pbm-faq-answer" role="region">
+            <p>Full proposal writing, document preparation, portal submission, or ongoing bid tracking are not included in the free audit.</p>
+          </div>
+        </div>
+
+        <div class="pbm-faq-item">
+          <button class="pbm-faq-question" aria-expanded="false">
+            What happens after the free audit?
+            <svg class="pbm-faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pbm-faq-answer" role="region">
+            <p>Scope sends a short summary and recommends the most appropriate next step — whether that is Pipeline Setup, Monthly Management, Proposal Coordination, or a consultation call.</p>
+          </div>
+        </div>
+
+        <div class="pbm-faq-item">
+          <button class="pbm-faq-question" aria-expanded="false">
+            What is the difference between setup and monthly management?
+            <svg class="pbm-faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pbm-faq-answer" role="region">
+            <p>Setup builds the system one time — tracker, calendar, checklists, and workflow. Monthly management keeps that system updated, monitors deadlines continuously, tracks addenda, and delivers a weekly action list.</p>
+          </div>
+        </div>
+
+        <div class="pbm-faq-item">
+          <button class="pbm-faq-question" aria-expanded="false">
+            Do you write the full proposal?
+            <svg class="pbm-faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pbm-faq-answer" role="region">
+            <p>The core service focuses on organization, tracking, readiness, and coordination. Proposal writing may be available as an add-on — contact us to discuss your specific RFP needs.</p>
+          </div>
+        </div>
+
+        <div class="pbm-faq-item">
+          <button class="pbm-faq-question" aria-expanded="false">
+            Do you guarantee contract awards?
+            <svg class="pbm-faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pbm-faq-answer" role="region">
+            <p>No. Scope does not guarantee contract awards, agency decisions, or procurement outcomes. Our service improves your organization, readiness, and submission quality — the award decision rests with the issuing agency.</p>
+          </div>
+        </div>
+
+        <div class="pbm-faq-item">
+          <button class="pbm-faq-question" aria-expanded="false">
+            Can clients upgrade later?
+            <svg class="pbm-faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pbm-faq-answer" role="region">
+            <p>Yes. Clients can start with the free audit or Pipeline Setup and move into Monthly Management at any time. There is no penalty for upgrading.</p>
+          </div>
+        </div>
+
+        <div class="pbm-faq-item">
+          <button class="pbm-faq-question" aria-expanded="false">
+            What happens after becoming a paid client?
+            <svg class="pbm-faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pbm-faq-answer" role="region">
+            <p>You receive a welcome email with your client intake form, document upload instructions, kickoff call link, and onboarding checklist. Scope then confirms your service package, reviews your materials, and prepares your bid tracker, calendar, and compliance checklist.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA ═══ -->
+  <div class="pbm-final-cta" id="cta">
+    <div class="container">
+      <div class="eyebrow" style="justify-content:center;">Ready to Get Organized</div>
+      <h2>Ready to Bring Order<br />to Your Bid Pipeline?</h2>
+      <p>Start with a free audit and see what is missing, what is urgent, and what needs to happen next.</p>
+      <div class="pbm-final-ctas">
+        <a href="#audit-form" class="btn btn-gold btn-large">
+          Get a Free Bid Pipeline Audit
+          <svg viewBox="0 0 20 20" fill="none" width="18" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="index.html#contact" class="btn btn-outline btn-large">Schedule a Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-gold-bar"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="scope-business-services-logo.jpg" alt="Scope Business Services" class="footer-logo" loading="lazy" />
+          <p class="footer-tagline">Plan With Purpose. Execute With Impact.</p>
+          <div class="footer-certs">
+            <span class="cert-pill cert-pill-sm">MWBE</span>
+            <span class="cert-pill cert-pill-sm">SBE</span>
+            <span class="cert-pill cert-pill-sm">WBE</span>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/scope-business-services" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Scope Business Services on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M20.45 20.45h-3.554v-5.569c0-1.328-.025-3.037-1.85-3.037-1.851 0-2.135 1.445-2.135 2.939v5.667H9.354V9h3.414v1.561h.048c.476-.9 1.637-1.85 3.37-1.85 3.602 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="index.html#services">Workforce &amp; Administrative Solutions</a></li>
+            <li><a href="index.html#services">Event Management and Logistics</a></li>
+            <li><a href="index.html#services">Training Program Support</a></li>
+            <li><a href="index.html#services">Business Consulting</a></li>
+            <li><a href="procurement-bid-pipeline-management.html">Bid Pipeline Management</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#why-us">Why Choose Us</a></li>
+            <li><a href="index.html#clients">Our Reach</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="business-guides.html">Business Guides</a></li>
+            <li><a href="ebooks.html">Ebooks</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Get In Touch</h5>
+          <ul>
+            <li><a href="tel:+12013294390">(201) 329-4390</a></li>
+            <li><a href="mailto:info@scopebusinesses.com">info@scopebusinesses.com</a></li>
+            <li>1280 Lexington Ave FRNT 2<br />New York, NY 10028</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Scope Business Services. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+      <p class="pbm-disclaimer">Scope Business Services provides bid organization, readiness, and coordination support. We do not guarantee contract awards, agency decisions, or procurement outcomes.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    /* ── FAQ ACCORDION ── */
+    document.querySelectorAll('.pbm-faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.pbm-faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.pbm-faq-item.open').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.pbm-faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    /* ── FILE UPLOAD VALIDATION ── */
+    const fileInput  = document.getElementById('af-files');
+    const fileList   = document.getElementById('fileList');
+    const fileError  = document.getElementById('fileError');
+    const fileZone   = document.getElementById('fileZone');
+    const MAX_FILES  = 5;
+    const MAX_BYTES  = 25 * 1024 * 1024; // 25 MB
+
+    function renderFiles(files) {
+      fileList.innerHTML = '';
+      let total = 0;
+      Array.from(files).forEach(f => {
+        total += f.size;
+        const li = document.createElement('li');
+        li.textContent = `${f.name} (${(f.size / 1024).toFixed(0)} KB)`;
+        fileList.appendChild(li);
+      });
+      const invalid = files.length > MAX_FILES || total > MAX_BYTES;
+      fileError.style.display = invalid ? 'block' : 'none';
+      return !invalid;
+    }
+
+    fileInput.addEventListener('change', () => renderFiles(fileInput.files));
+
+    // Drag-and-drop visual feedback
+    ['dragover','dragenter'].forEach(ev =>
+      fileZone.addEventListener(ev, e => { e.preventDefault(); fileZone.classList.add('drag-over'); })
+    );
+    ['dragleave','drop'].forEach(ev =>
+      fileZone.addEventListener(ev, e => { e.preventDefault(); fileZone.classList.remove('drag-over'); })
+    );
+
+    /* ── AUDIT FORM SUBMISSION ── */
+    const auditForm    = document.getElementById('auditForm');
+    const auditSuccess = document.getElementById('auditSuccess');
+
+    auditForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Validate required fields
+      let valid = true;
+      auditForm.querySelectorAll('[required]').forEach(field => {
+        const empty = field.type === 'checkbox' ? !field.checked : !field.value.trim();
+        field.classList.toggle('field-error', empty);
+        if (empty) valid = false;
+      });
+      if (!valid) return;
+
+      // Validate file size
+      if (fileInput.files.length > 0 && !renderFiles(fileInput.files)) return;
+
+      const btn = auditForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      // Build form data (Formspree handles file uploads on paid plan;
+      // free plan: text fields only — files noted in message field)
+      const data = new FormData(auditForm);
+
+      try {
+        const res = await fetch('https://formspree.io/f/xkopowqk', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          auditForm.style.display = 'none';
+          auditSuccess.style.display = 'block';
+          auditSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else throw new Error();
+      } catch {
+        btn.textContent = 'Request My Free Audit';
+        btn.disabled = false;
+        alert('Something went wrong. Please email us directly at info@scopebusinesses.com');
+      }
+    });
+
+    // Clear field errors on input
+    auditForm.querySelectorAll('input, select').forEach(f =>
+      f.addEventListener('change', () => f.classList.remove('field-error'))
+    );
+  </script>
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Scope Business Services</title>
+  <meta name="description" content="Welcome to Scope Business Services. Complete your client intake, schedule your kickoff call, and upload your bid documents to get started." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .welcome-page { min-height: 100vh; }
+
+    /* ── HERO ── */
+    .welcome-hero {
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-mid) 100%);
+      padding: 120px 0 80px;
+      text-align: center;
+      border-bottom: 1px solid rgba(245,197,24,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    .welcome-hero::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -60%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(245,197,24,0.09) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .welcome-check {
+      width: 64px; height: 64px;
+      background: rgba(245,197,24,0.15);
+      border: 2px solid rgba(245,197,24,0.45);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: var(--gold);
+      margin: 0 auto 24px;
+      position: relative;
+    }
+    .welcome-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.02;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .welcome-hero h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+    .welcome-hero p {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--white-70);
+      max-width: 600px;
+      margin: 0 auto 36px;
+      line-height: 1.75;
+      position: relative;
+    }
+    .welcome-hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .welcome-body { padding: 80px 0 60px; }
+    .welcome-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 56px;
+    }
+
+    /* ── ONBOARDING CHECKLIST ── */
+    .welcome-checklist-card {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 16px;
+      padding: 36px 32px;
+    }
+    .welcome-checklist-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .welcome-checklist-card .sub {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--white-50);
+      margin-bottom: 28px;
+    }
+    .welcome-steps {
+      list-style: none;
+      padding: 0;
+    }
+    .welcome-steps li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .welcome-steps li:last-child { border-bottom: none; }
+    .welcome-step-num {
+      width: 32px; height: 32px;
+      background: rgba(245,197,24,0.12);
+      border: 1px solid rgba(245,197,24,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .welcome-step-text {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--white-70);
+      line-height: 1.6;
+    }
+    .welcome-step-text strong {
+      display: block;
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    /* ── NEXT ACTIONS CARD ── */
+    .welcome-actions-card {
+      background: rgba(245,197,24,0.05);
+      border: 1px solid rgba(245,197,24,0.22);
+      border-radius: 16px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .welcome-actions-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .welcome-actions-card .sub {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--white-50);
+      margin-bottom: 8px;
+    }
+    .welcome-action-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--white);
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    }
+    .welcome-action-btn:hover {
+      border-color: rgba(245,197,24,0.4);
+      background: rgba(245,197,24,0.05);
+      transform: translateX(4px);
+    }
+    .welcome-action-icon {
+      width: 40px; height: 40px;
+      background: rgba(245,197,24,0.12);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .welcome-action-text strong {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+    .welcome-action-text span {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      color: var(--white-50);
+    }
+    .welcome-action-btn .arrow {
+      margin-left: auto;
+      color: var(--gold);
+      opacity: 0.6;
+      font-size: 1rem;
+    }
+
+    /* ── CONTACT STRIP ── */
+    .welcome-contact-strip {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .welcome-contact-strip p {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--white-70);
+    }
+    .welcome-contact-strip p strong {
+      color: var(--white);
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .welcome-contact-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .welcome-contact-links a {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: underline;
+    }
+    .welcome-contact-links a:hover { opacity: .8; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .welcome-grid { grid-template-columns: 1fr; }
+      .welcome-hero-btns { flex-direction: column; align-items: center; }
+      .welcome-hero-btns .btn { width: 100%; max-width: 360px; justify-content: center; }
+    }
+  </style>
+</head>
+<body class="welcome-page">
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="scope-business-services-logo.jpg" alt="Scope Business Services" class="logo-img" loading="eager" />
+      </a>
+      <div class="nav-certs">
+        <span class="cert-pill">MWBE</span>
+        <span class="cert-pill">SBE</span>
+        <span class="cert-pill">WBE</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ WELCOME HERO ═══ -->
+  <section class="welcome-hero">
+    <div class="container">
+      <div class="welcome-check">✓</div>
+      <h1>Welcome to<br /><em>Scope Business Services</em></h1>
+      <p>Thank you for choosing Scope to support your bid pipeline and procurement process. We're honored to help you organize opportunities, track critical deadlines, and move from planning to execution with confidence.</p>
+      <div class="welcome-hero-btns">
+        <a href="index.html#contact" class="btn btn-gold btn-large">
+          Complete Client Intake
+          <svg viewBox="0 0 20 20" fill="none" width="18" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="index.html#contact" class="btn btn-outline btn-large">Schedule Your Kickoff Call</a>
+        <a href="index.html#contact" class="btn btn-outline btn-large">Upload Bid Documents</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BODY ═══ -->
+  <div class="welcome-body">
+    <div class="container">
+      <div class="welcome-grid">
+
+        <!-- Onboarding Checklist -->
+        <div class="welcome-checklist-card reveal">
+          <h2>Your Onboarding Checklist</h2>
+          <p class="sub">Complete these steps to get your bid pipeline up and running.</p>
+          <ol class="welcome-steps">
+            <li>
+              <div class="welcome-step-num">1</div>
+              <div class="welcome-step-text">
+                <strong>Complete client intake form</strong>
+                Share your business details, active opportunities, and service preferences.
+              </div>
+            </li>
+            <li>
+              <div class="welcome-step-num">2</div>
+              <div class="welcome-step-text">
+                <strong>Upload current bid documents</strong>
+                RFP/RFQ notices, opportunity links, deadline lists, or related materials.
+              </div>
+            </li>
+            <li>
+              <div class="welcome-step-num">3</div>
+              <div class="welcome-step-text">
+                <strong>Schedule your kickoff call</strong>
+                A 30–60 minute call to review your pipeline, confirm your package, and align on priorities.
+              </div>
+            </li>
+            <li>
+              <div class="welcome-step-num">4</div>
+              <div class="welcome-step-text">
+                <strong>Confirm service package and communication preferences</strong>
+                Weekly updates, preferred contact method, and reporting format.
+              </div>
+            </li>
+            <li>
+              <div class="welcome-step-num">5</div>
+              <div class="welcome-step-text">
+                <strong>Receive bid tracker, calendar, and checklist setup</strong>
+                Scope delivers your custom pipeline system within 3–5 business days of kickoff.
+              </div>
+            </li>
+            <li>
+              <div class="welcome-step-num">6</div>
+              <div class="welcome-step-text">
+                <strong>Begin weekly or project-based support</strong>
+                Regular updates, deadline monitoring, and action lists start from here.
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="welcome-actions-card reveal">
+          <h2>Start Here</h2>
+          <p class="sub">Three actions to complete within the first 48 hours.</p>
+
+          <a href="index.html#contact" class="welcome-action-btn">
+            <div class="welcome-action-icon">
+              <svg viewBox="0 0 24 24" fill="none" width="20"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 7h8M8 11h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <div class="welcome-action-text">
+              <strong>Complete Client Intake</strong>
+              <span>Business details, active bids, service preferences</span>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+
+          <a href="index.html#contact" class="welcome-action-btn">
+            <div class="welcome-action-icon">
+              <svg viewBox="0 0 24 24" fill="none" width="20"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M8 2v4M16 2v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <div class="welcome-action-text">
+              <strong>Schedule Your Kickoff Call</strong>
+              <span>30–60 minutes to align on priorities and confirm your package</span>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+
+          <a href="index.html#contact" class="welcome-action-btn">
+            <div class="welcome-action-icon">
+              <svg viewBox="0 0 24 24" fill="none" width="20"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="welcome-action-text">
+              <strong>Upload Bid Documents</strong>
+              <span>RFPs, RFQs, opportunity notices, deadline lists</span>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+
+          <div style="margin-top:8px; padding:16px; background:rgba(255,255,255,0.03); border-radius:10px; border:1px solid rgba(255,255,255,0.07);">
+            <p style="font-family:var(--font-body); font-size:0.82rem; color:var(--white-50); line-height:1.65;">
+              Questions before your kickoff call? Email us at <a href="mailto:info@scopebusinesses.com" style="color:var(--gold);">info@scopebusinesses.com</a> or call <a href="tel:+12013294390" style="color:var(--gold);">(201) 329-4390</a>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Contact Strip -->
+      <div class="welcome-contact-strip reveal">
+        <p>
+          <strong>Need help getting started?</strong>
+          The Scope team is available Monday–Friday to assist with your intake, scheduling, or any questions.
+        </p>
+        <div class="welcome-contact-links">
+          <a href="mailto:info@scopebusinesses.com">info@scopebusinesses.com</a>
+          <a href="tel:+12013294390">(201) 329-4390</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-gold-bar"></div>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Scope Business Services. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
